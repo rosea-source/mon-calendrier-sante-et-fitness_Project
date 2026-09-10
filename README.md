@@ -80,19 +80,19 @@ app/
 
 ### Détail des contributions
 
-**Yumnah Ahmed (6236429)**
+**Yumnah Ahmed **
 - Création du projet de base et configuration initiale
 - Écran d'ajout de séance (fragment, presenter, validation)
 - Correction des imports et vérifications continues sur la branche `developpement`
 
 
-**Alexandra Rose Cirius (2368820)**
+**Alexandra Rose Cirius **
 - Écran d'accueil : calendrier mensuel, dots indicateurs, dialog préférences
 - Migration Room → SQLiteOpenHelper
 - Correction des branches Git (ajout et suppression)
 - Vérifications continues sur la branche `developpement`
 
-**Amphy Reyes (1423179)**
+**Amphy Reyes **
 - Écran historique : liste des séances et suivi du poids
 - Support écran d'accueil
 - Support écran Ajouter
