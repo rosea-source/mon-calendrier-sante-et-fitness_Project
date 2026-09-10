@@ -154,11 +154,11 @@ app/
 
 ## Équipe
 
-| Membre | DA |
-|--------|----|
-| Yumnah Ahmed | 6236429 |
-| Alexandra Rose Cirius | 2368820 |
-| Amphy Reyes | 1423179 |
+| Membre | 
+|--------|
+| Yumnah Ahmed | 
+| Alexandra Rose Cirius | 
+| Amphy Reyes | 
 
 Cours **420-G25-RO** — Collège de Rosemont — Session Hiver 2026
 
