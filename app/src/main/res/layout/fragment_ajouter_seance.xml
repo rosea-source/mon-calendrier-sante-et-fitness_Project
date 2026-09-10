@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <LinearLayout
+            android:id="@+id/btnRetourAccueil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@android:drawable/ic_media_previous"
+                app:tint="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/retour_accueil"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="2dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:text="@string/titre_nouvelle_seance"
+            android:textColor="#2C2C2A"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="24dp"/>
+
+        <TextView
+            android:text="@string/label_type_exercice"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Spinner
+            android:id="@+id/spinnerType"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:text="@string/label_nom_exercice"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editNom"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/hint_nom"
+            android:inputType="text"
+            android:autofillHints="no"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:text="@string/label_duree"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editDuree"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/hint_duree"
+            android:inputType="number"
+            android:autofillHints="no"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:text="@string/label_poids"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/editPoids"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/hint_poids"
+            android:inputType="numberDecimal"
+            android:autofillHints="no"
+            android:layout_marginBottom="24dp" />
+        <TextView
+            android:text="@string/label_date"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:id="@+id/layoutDate"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:padding="8dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp"
+            android:clickable="true"
+            android:focusable="true">
+
+
+            <TextView
+                android:layout_width="34dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/icone_calendrier"
+                android:textSize="20sp"/>
+
+
+            <TextView
+                android:id="@+id/tvDateSelectionnee"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#2C2C2A"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+
+            <TextView
+                android:layout_width="34dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/icone_modifier"
+                android:textSize="18sp"/>
+
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/btnSauvegarder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/btn_sauvegarder"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+</ScrollView>

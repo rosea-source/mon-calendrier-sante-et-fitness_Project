@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Mon Calendrier Santé</string>
+    <string name="titre_nouvelle_seance">Nouvelle séance</string>
+    <string name="label_type_exercice">Type d\'exercice</string>
+    <string name="label_nom_exercice">Nom de l\'exercice</string>
+    <string name="label_duree">Durée (minutes)</string>
+    <string name="label_poids">Poids (kg)</string>
+    <string name="hint_nom">ex: Course, Yoga, Squat...</string>
+    <string name="hint_duree">ex: 30</string>
+    <string name="hint_poids">ex: 72.5</string>
+    <string name="btn_sauvegarder">Sauvegarder</string>
+    <string name="btn_retour"> Retour</string>
+    <string name="retour_accueil">Retour à l\'accueil</string>
+    <string name="label_date">Date de la séance</string>
+    <string name="icone_calendrier">📅</string>
+    <string name="icone_modifier">✏️</string>
+    <string name="content_desc_retour">Retour</string>
+
+</resources>

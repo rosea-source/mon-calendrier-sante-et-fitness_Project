@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/accueilFragment">
+
+    <fragment
+        android:id="@+id/accueilFragment"
+        android:name="com.example.mon_calendrier_sante_et_fitness.ui.accueil.AccueilFragment"
+        android:label="Accueil" >
+
+        <action
+            android:id="@+id/action_accueil_to_ajouter"
+            app:destination="@id/ajouterFragment" />
+
+        <action
+            android:id="@+id/action_accueil_to_historique"
+            app:destination="@id/historiqueFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/ajouterFragment"
+        android:name="com.example.mon_calendrier_sante_et_fitness.ui.ajouter.AjouterSeanceFragment"
+        android:label="Ajouter" />
+
+    <fragment
+        android:id="@+id/historiqueFragment"
+        android:name="com.example.mon_calendrier_sante_et_fitness.ui.historique.HistoriqueFragment"
+        android:label="Historique">
+
+        <action
+            android:id="@+id/action_historique_to_ajouter"
+            app:destination="@id/ajouterFragment" />
+
+    </fragment>
+
+</navigation>

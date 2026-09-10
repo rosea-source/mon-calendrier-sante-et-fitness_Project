@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAF6"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="32dp"
+        android:paddingBottom="24dp">
+
+        <!-- ===== HEADER : Bonjour + Avatar ===== -->
+
+        <TextView
+            android:id="@+id/tvBonjour"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="40dp"
+            android:text="Bonjour 👋"
+            android:textColor="#5F5E5A"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toStartOf="@+id/ivAvatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="2dp"
+            android:text="Ton suivi"
+            android:textColor="#2C2C2A"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/ivAvatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvBonjour" />
+
+        <TextView
+            android:id="@+id/tvSousTitre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="6dp"
+            android:text="Chaque petit effort te rapproche\nde ton objectif ! 💪"
+            android:textColor="#3B6D11"
+            android:textSize="13sp"
+            android:lineSpacingMultiplier="1.3"
+            app:layout_constraintEnd_toStartOf="@+id/ivAvatar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitre" />
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_circle_gray"
+            android:contentDescription="Profil"
+            android:padding="8dp"
+            android:src="@drawable/ic_person"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- ===== CARTE CALENDRIER ===== -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardCalendrier"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="20dp"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="0dp"
+            app:cardPreventCornerOverlap="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSousTitre">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Navigation mois -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageButton
+                        android:id="@+id/btnMoisPrecedent"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Mois précédent"
+                        android:src="@drawable/ic_chevron_left"
+                        android:padding="4dp" />
+
+                    <TextView
+                        android:id="@+id/tvMoisAnnee"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Mai 2025"
+                        android:textColor="#2C2C2A"
+                        android:textSize="15sp"
+                        android:textStyle="bold" />
+
+                    <ImageButton
+                        android:id="@+id/btnMoisSuivant"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="Mois suivant"
+                        android:src="@drawable/ic_chevron_right"
+                        android:padding="4dp" />
+
+                </LinearLayout>
+
+                <!-- En-têtes jours de la semaine -->
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="7"
+                    android:layout_marginBottom="4dp">
+
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" android:gravity="center"
+                        android:text="LUN" android:textSize="11sp" android:textColor="#888780"
+                        android:textStyle="bold" android:paddingBottom="6dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" android:gravity="center"
+                        android:text="MAR" android:textSize="11sp" android:textColor="#888780"
+                        android:textStyle="bold" android:paddingBottom="6dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" android:gravity="center"
+                        android:text="MER" android:textSize="11sp" android:textColor="#888780"
+                        android:textStyle="bold" android:paddingBottom="6dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" android:gravity="center"
+                        android:text="JEU" android:textSize="11sp" android:textColor="#888780"
+                        android:textStyle="bold" android:paddingBottom="6dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" android:gravity="center"
+                        android:text="VEN" android:textSize="11sp" android:textColor="#888780"
+                        android:textStyle="bold" android:paddingBottom="6dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" android:gravity="center"
+                        android:text="SAM" android:textSize="11sp" android:textColor="#888780"
+                        android:textStyle="bold" android:paddingBottom="6dp"/>
+                    <TextView android:layout_width="0dp" android:layout_height="wrap_content"
+                        android:layout_columnWeight="1" android:gravity="center"
+                        android:text="DIM" android:textSize="11sp" android:textColor="#888780"
+                        android:textStyle="bold" android:paddingBottom="6dp"/>
+
+                </GridLayout>
+
+                <GridLayout
+                    android:id="@+id/gridCalendrier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="7"
+                    android:rowCount="6"
+                    android:useDefaultMargins="false" />
+
+                <!-- Séparateur -->
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="#E0DED6" />
+
+                <!-- Légende -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:background="@drawable/bg_dot_green" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="Exercice effectué"
+                        android:textColor="#5F5E5A"
+                        android:textSize="12sp" />
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:background="@drawable/bg_dot_red" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:text="Aucun exercice"
+                        android:textColor="#5F5E5A"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- ===== BOUTONS AJOUTER / HISTORIQUE ===== -->
+
+        <LinearLayout
+            android:id="@+id/layoutBoutons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardCalendrier">
+
+            <!-- Bouton Ajouter (vert foncé) -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnAjouter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="#3B6D11"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <FrameLayout
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:background="@drawable/bg_circle_white_alpha"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_add"
+                            android:contentDescription="Ajouter"
+                            app:tint="#FFFFFF" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ajouter"
+                        android:textColor="#FFFFFF"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enregistrer une nouvelle séance"
+                        android:textColor="#CCFFFFFF"
+                        android:textSize="12sp"
+                        android:lineSpacingMultiplier="1.3" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Bouton Historique (vert clair) -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnHistorique"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:clickable="true"
+                android:focusable="true"
+                app:cardBackgroundColor="#EAF3DE"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <FrameLayout
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:layout_marginBottom="8dp">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_history"
+                            android:contentDescription="Historique"
+                            app:tint="#3B6D11" />
+
+                    </FrameLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Historique"
+                        android:textColor="#27500A"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Voir tes statistiques et ton évolution"
+                        android:textColor="#3B6D11"
+                        android:textSize="12sp"
+                        android:lineSpacingMultiplier="1.3" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- ===== TOTAL MINUTES ===== -->
+
+        <TextView
+            android:id="@+id/tvTotalMinutes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="16dp"
+            android:text="Total cette semaine : 0h 0min"
+            android:textColor="#5F5E5A"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutBoutons" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

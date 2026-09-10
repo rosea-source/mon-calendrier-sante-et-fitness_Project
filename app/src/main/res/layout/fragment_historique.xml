@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8FAF6"
+    android:fillViewport="true"
+    android:padding="18dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="60dp">
+
+        <LinearLayout
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="4dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:src="@android:drawable/ic_media_previous"
+                app:tint="#000000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Retour à l'accueil"
+                android:textColor="#000000"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginStart="2dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Historique"
+            android:textColor="#2C2C2A"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:layout_marginTop="4dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aperçu"
+            android:textColor="#2C2C2A"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="14dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:layout_marginTop="8dp">
+
+            <LinearLayout
+                style="@style/CardStatBox"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="34dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="🕒"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total d'heures"
+                        android:textColor="#2C2C2A"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tvTotalHeuresValeur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0h 0min"
+                        android:textColor="#2C2C2A"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginTop="3dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/CardStatBox"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="34dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="📅"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Séances réalisées"
+                        android:textColor="#2C2C2A"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tvSeancesValeur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="#2C2C2A"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginTop="3dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/CardStatBox"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="34dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="⚖️"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Poids perdu&#10;(estimé)"
+                        android:textColor="#2C2C2A"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tvPoidsValeur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0,0 kg"
+                        android:textColor="#2C2C2A"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginTop="3dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/CardStatBox"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="34dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="🎯"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Poids restant&#10;à perdre"
+                        android:textColor="#2C2C2A"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tvPoidsRestantValeur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0,0 kg"
+                        android:textColor="#2C2C2A"
+                        android:textSize="12sp"
+                        android:gravity="center"
+                        android:layout_marginTop="3dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Évolution du poids"
+            android:textColor="#2C2C2A"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <com.example.mon_calendrier_sante_et_fitness.ui.historique.GraphiqueView
+            android:id="@+id/graphiquePoids"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#FFFFFF"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Heures/Minutes d'exercice par semaine"
+            android:textColor="#2C2C2A"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <com.example.mon_calendrier_sante_et_fitness.ui.historique.GraphiqueView
+            android:id="@+id/graphiqueHeures"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="#FFFFFF"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dernières séances"
+            android:textColor="#2C2C2A"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Filtrer par date"
+            android:textColor="#2C2C2A"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp" />
+
+        <EditText
+            android:id="@+id/editDateDebut"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            android:focusable="false"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="Date de début"
+            android:padding="12dp"
+            android:textSize="13sp"
+            android:drawableTint="#888888"/>
+
+        <EditText
+            android:id="@+id/editDateFin"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="8dp"
+            android:background="#FFFFFF"
+            android:clickable="true"
+            android:focusable="false"
+            android:drawableStart="@drawable/ic_calendar"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:hint="Date de fin"
+            android:padding="12dp"
+            android:textSize="13sp"
+            android:drawableTint="#888888"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btnFiltrer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Filtrer"
+                android:backgroundTint="#3B6D11"
+                android:textColor="#FFFFFF" />
+
+            <Button
+                android:id="@+id/btnReinitialiser"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Réinitialiser"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="#777777"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutSeances"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="40dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Préférences"
+        android:textColor="#2C2C2A"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Prénom -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prénom"
+        android:textColor="#5F5E5A"
+        android:textSize="13sp"
+        android:layout_marginBottom="6dp" />
+
+    <EditText
+        android:id="@+id/etPrenom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ex: Alex"
+        android:inputType="textPersonName"
+        android:background="@drawable/bg_input"
+        android:padding="12dp"
+        android:textColor="#2C2C2A"
+        android:textSize="15sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Poids objectif -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Poids objectif (kg)"
+        android:textColor="#5F5E5A"
+        android:textSize="13sp"
+        android:layout_marginBottom="6dp" />
+
+    <EditText
+        android:id="@+id/etPoidsObjectif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ex: 75.0"
+        android:inputType="numberDecimal"
+        android:background="@drawable/bg_input"
+        android:padding="12dp"
+        android:textColor="#2C2C2A"
+        android:textSize="15sp"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Bouton Sauvegarder -->
+    <Button
+        android:id="@+id/btnSauvegarder"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Sauvegarder"
+        android:textSize="15sp"
+        android:textColor="#FFFFFF"
+        android:background="#3B6D11"
+        app:backgroundTint="#3B6D11"
+        app:cornerRadius="12dp" />
+
+</LinearLayout>

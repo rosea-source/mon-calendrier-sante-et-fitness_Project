@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="CardStatBox">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">92dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_margin">6dp</item>
+        <item name="android:background">#FFFFFF</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:padding">10dp</item>
+    </style>
+
+</resources>
